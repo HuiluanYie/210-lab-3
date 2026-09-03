@@ -14,6 +14,7 @@ struct Restaurant {
 
 //Function prototype
 Restaurant create();
+void outputs(Restaurant);
 
 int main() {
     //Variable declaration
@@ -26,10 +27,10 @@ int main() {
 }
 
 //Function definitions
-// create() creates a temporary Restaurant, receive user input via the console to populate the struct's data
-// arguments: null
-// returns: the temporary Restaurant
 Restaurant create() {
+    // create() creates a temporary Restaurant, receive user input via the console to populate the struct's data
+    // arguments: null
+    // returns: the temporary Restaurant
     Restaurant temp;
 
     int sc;
@@ -73,4 +74,24 @@ Restaurant create() {
     temp.avg_price = ap;
 
     return temp;
+}
+
+void outputs(Restaurant restaurant)
+{
+    // outputs(Restaurant) outputs the struct's data in a nice, presentable format
+    // arguments: Restaurant
+    // returns: null
+    cout << "Restaurant name: " << restaurant.name << endl;
+    cout << "Maximum seat: " << restaurant.seating_capacity << endl;
+    cout << "Rating: " << restaurant.rating << endl;
+    cout << "Average price: " << restaurant.avg_price << endl;
+    if (restaurant.offers_takeout)
+    {
+        "The "
+    }
+    else
+    {
+        /* code */
+    }
+    
 }
