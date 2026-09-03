@@ -14,17 +14,32 @@ struct Restaurant
 };
 
 //Function prototype
-Restaurant create(*istream input, *ostream output);
+Restaurant create();
 
 int main() {
+    create();
 
     return 0;
 }
 
 //Function definitions
-Restaurant create(*istream input, *ostream output)
+// create() creates a temporary Restaurant, receive user input via the console to populate the struct's data
+// arguments: null
+// returns: the temporary Restaurant
+Restaurant create()
 {
     Restaurant temp;
-    cout >> "Enter the name of the Restaurant: ";
-    cin << temp.name;
+
+    cout << "Enter the name of the Restaurant: ";
+    cin >> temp.name;
+    cout << "Enter the seating capacity of the Restaurant: ";
+    cin >> temp.seating_capacity;
+    cout << "Enter the rating of the Restaurant: ";
+    cin >> temp.rating;
+    cout << "Does the Restaurant offer takeout? Enter 'true' or 'false': ";
+    cin >> temp.offers_takeout;
+    cout << "Enter the average price of the Restaurant: ";
+    cin >> temp.avg_price;
+    
+    return temp;
 }
