@@ -16,7 +16,11 @@ struct Restaurant {
 Restaurant create();
 
 int main() {
-    create();
+    //Variable declaration
+    Restaurant restaurant;
+
+    //Function calls
+    restaurant = create();
 
     return 0;
 }
@@ -54,15 +58,15 @@ Restaurant create() {
 
     cout << "Does the Restaurant offer takeout? Enter 1(true) or 0(false): ";
     cin >> ot;
-    while (ot != 1 || ot != 0) {
-        cout << "Please enter true or false: ";
+    while (ot != 1 && ot != 0) {
+        cout << "Please enter 1(true) or 0(false): ";
         cin >> ot;
     }
     temp.offers_takeout = static_cast<bool>(ot);
 
     cout << "Enter the average price in $ of the Restaurant: ";
     cin >> ap;
-    while (sc < 0) {
+    while (ap < 0) {
         cout << "Please enter a valid average price of the Restaurant: ";
         cin >> ap;
     }
