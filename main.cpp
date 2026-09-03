@@ -32,7 +32,7 @@ Restaurant create()
 
     int sc;
     double r;
-    bool ot;
+    int ot;
     double ap;
 
     cout << "Enter the name of the Restaurant: ";
@@ -40,18 +40,40 @@ Restaurant create()
     
     cout << "Enter the seating capacity of the Restaurant: ";
     cin >> sc;
-    while (condition)
+    while (sc < 0)
     {
-        /* code */
+        cout << "Please enter a positive seating capacity for the Restaurant: ";
+        cin >> sc;
     }
-    
-    temp.seating_capacity;
-    cout << "Enter the rating of the Restaurant: ";
-    cin >> temp.rating;
-    cout << "Does the Restaurant offer takeout? Enter 'true' or 'false': ";
-    cin >> temp.offers_takeout;
+    temp.seating_capacity = sc;
+
+    cout << "Enter the rating(0~5) of the Restaurant: ";
+    cin >> r;
+    while (r < 0 || r > 5)
+    {
+        cout << "Please enter a rating of 0~5 for the Restaurant: ";
+        cin >> r;
+    }
+    temp.rating = r;
+
+
+    cout << "Does the Restaurant offer takeout? Enter true or false: ";
+    cin >> ot;
+    while (ot != true && ot != false)
+    {
+        cout << "Please enter true or false: ";
+        cin >> ot;
+    } 
+    temp.offers_takeout = ot;
+
     cout << "Enter the average price of the Restaurant: ";
-    cin >> temp.avg_price;
+    cin >> ap;
+    while (sc < 0)
+    {
+        cout << "Please enter a valid average price of the Restaurant: ";
+        cin >> ap;
+    }  
+    temp.avg_price = ap;
 
     return temp;
 }
