@@ -30,16 +30,28 @@ Restaurant create()
 {
     Restaurant temp;
 
+    int sc;
+    double r;
+    bool ot;
+    double ap;
+
     cout << "Enter the name of the Restaurant: ";
     cin >> temp.name;
+    
     cout << "Enter the seating capacity of the Restaurant: ";
-    cin >> temp.seating_capacity;
+    cin >> sc;
+    while (condition)
+    {
+        /* code */
+    }
+    
+    temp.seating_capacity;
     cout << "Enter the rating of the Restaurant: ";
     cin >> temp.rating;
     cout << "Does the Restaurant offer takeout? Enter 'true' or 'false': ";
     cin >> temp.offers_takeout;
     cout << "Enter the average price of the Restaurant: ";
     cin >> temp.avg_price;
-    
+
     return temp;
 }
