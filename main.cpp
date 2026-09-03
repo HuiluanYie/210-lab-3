@@ -1,9 +1,7 @@
 // COMSC-210 | Lab 3 | Huiluan Yie
 
 #include <iostream>
-
 #include <string>
-
 using namespace std;
 
 struct Restaurant {
@@ -19,8 +17,7 @@ Restaurant create();
 void outputs(Restaurant);
 
 int main() {
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         //Variable declaration
         Restaurant restaurant;
 
@@ -43,7 +40,6 @@ Restaurant create() {
     int ot;
     double ap;
 
-    
     cout << "Enter the name of the Restaurant: ";
     getline(cin, temp.name);
 
@@ -95,4 +91,5 @@ void outputs(Restaurant restaurant) {
     } else {
         cout << restaurant.name << " doesn't offer takeout.\n\n\n";
     }
+    cin.ignore();
 }
