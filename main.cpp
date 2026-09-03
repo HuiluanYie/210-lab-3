@@ -13,9 +13,18 @@ struct Restaurant
     double avg_price;
 };
 
+//Function prototype
+Restaurant create(*istream input, *ostream output);
 
 int main() {
 
-
     return 0;
+}
+
+//Function definitions
+Restaurant create(*istream input, *ostream output)
+{
+    Restaurant temp;
+    cout >> "Enter the name of the Restaurant: ";
+    cin << temp.name;
 }
