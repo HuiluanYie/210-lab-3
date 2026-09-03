@@ -1,7 +1,9 @@
 // COMSC-210 | Lab 3 | Huiluan Yie
 
 #include <iostream>
+
 #include <string>
+
 using namespace std;
 
 struct Restaurant {
@@ -17,12 +19,15 @@ Restaurant create();
 void outputs(Restaurant);
 
 int main() {
-    //Variable declaration
-    Restaurant restaurant;
+    for (int i = 0; i < 5; i++)
+    {
+        //Variable declaration
+        Restaurant restaurant;
 
-    //Function calls
-    restaurant = create();
-
+        //Function calls
+        restaurant = create();
+        outputs(restaurant);
+    }
     return 0;
 }
 
@@ -38,6 +43,7 @@ Restaurant create() {
     int ot;
     double ap;
 
+    
     cout << "Enter the name of the Restaurant: ";
     getline(cin, temp.name);
 
@@ -63,7 +69,7 @@ Restaurant create() {
         cout << "Please enter 1(true) or 0(false): ";
         cin >> ot;
     }
-    temp.offers_takeout = static_cast<bool>(ot);
+    temp.offers_takeout = static_cast < bool > (ot);
 
     cout << "Enter the average price in $ of the Restaurant: ";
     cin >> ap;
@@ -76,22 +82,17 @@ Restaurant create() {
     return temp;
 }
 
-void outputs(Restaurant restaurant)
-{
+void outputs(Restaurant restaurant) {
     // outputs(Restaurant) outputs the struct's data in a nice, presentable format
     // arguments: Restaurant
     // returns: null
-    cout << "Restaurant name: " << restaurant.name << endl;
+    cout << "\nRestaurant name: " << restaurant.name << endl;
     cout << "Maximum seat: " << restaurant.seating_capacity << endl;
     cout << "Rating: " << restaurant.rating << endl;
     cout << "Average price: " << restaurant.avg_price << endl;
-    if (restaurant.offers_takeout)
-    {
-        "The "
+    if (restaurant.offers_takeout) {
+        cout << restaurant.name << " offers takeout.\n\n\n";
+    } else {
+        cout << restaurant.name << " doesn't offer takeout.\n\n\n";
     }
-    else
-    {
-        /* code */
-    }
-    
 }
